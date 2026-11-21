@@ -39,8 +39,8 @@ Cada tarefa possui quatro campos:
 | Variáveis e tipos de dados           | Armazenamento de opções, contadores, textos e situação lógica das tarefas.                            |
 | Vetores e listas                     | Armazenamento de várias tarefas.                                                                      |
 | Registros / estruturas / dicionários | Agrupamento dos campos que pertencem a uma mesma tarefa.                                              |
-| Procedimentos e funções              | Separação das operações de cadastro, listagem, conclusão, edição, pesquisa e leitura de data/horário. |
-| Parâmetros e retorno                 | A rotina de leitura de data e horário recebe ou devolve informações conforme a linguagem.             |
+| Procedimentos e funções              | Separação das operações do menu e funções de validação (`validarData`, `validarHorario`, etc.).       |
+| Parâmetros e retorno                 | As funções de validação recebem o texto digitado e retornam um valor lógico indicando se é válido.    |
 | Estruturas condicionais              | Validação de entradas e seleção das operações do menu.                                                |
 | Estruturas de repetição              | Repetição do menu, validação dos dados e percurso das tarefas.                                        |
 | Pesquisa em textos                   | Localização de um trecho na descrição ou na data.                                                     |
@@ -110,7 +110,8 @@ No Windows, dependendo da instalação, o comando pode ser `python controle_tare
 - O limite é de **100 tarefas**.
 - As tarefas ficam armazenadas somente na memória enquanto o programa está em execução. Ao encerrar, os dados não são gravados em arquivo ou banco de dados.
 - A validação de data não verifica a quantidade real de dias de cada mês nem anos bissextos.
-- A pesquisa diferencia letras maiúsculas de minúsculas nas versões C e Python. Na versão Portugol, a pesquisa na descrição utiliza `MAIUSC`, tornando essa parte da busca indiferente a maiúsculas e minúsculas; a busca na data procura o trecho informado.
+- A pesquisa na descrição não diferencia letras maiúsculas de minúsculas nas três versões (exceto em letras acentuadas na versão C, devido à limitação padrão de `tolower`). A busca na data procura o trecho informado.
+- Na versão C, as mensagens exibidas por `printf` foram mantidas sem acentos para evitar quebra de caracteres em terminais Windows (como Dev-C++ e Code::Blocks).
 - Na versão C, a descrição é armazenada em um vetor de caracteres com capacidade para até 99 caracteres úteis, mais o terminador da string. Na versão Python, a entrada de descrição não possui esse mesmo limite fixo no código.
 - Na versão Portugol, a leitura de texto segue o comportamento do comando `leia` do VisualG.
 
