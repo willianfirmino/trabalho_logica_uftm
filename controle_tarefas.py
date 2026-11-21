@@ -1,8 +1,8 @@
 """
 GERENCIADOR DE TAREFAS
 
-Cada tarefa e representada por um DICIONARIO.
-O dicionario funciona conceitualmente como um REGISTRO:
+Cada tarefa e representada por um DICIONÁRIO.
+O dicionário funciona conceitualmente como um REGISTRO:
 reune campos relacionados (data, horario, descricao e concluida).
 A lista "agenda" armazena vários dicionários, ou seja, varios registros.
 """

@@ -231,7 +231,7 @@ inicio
     // REPITA mantem o menu ativo ate a opcao 6.
     repita
         escreval("")
-        escreval("________GERENCIADOR DE AGENDA________")
+        escreval("________GERENCIADOR DE TAREFAS________")
         escreval("1 - Adicionar tarefa")
         escreval("2 - Listar tarefas")
         escreval("3 - Marcar tarefa como concluida")

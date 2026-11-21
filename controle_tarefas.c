@@ -245,7 +245,7 @@ void pesquisar(void) {
     printf("Digite uma palavra da descricao ou parte da data: ");
     lerTexto(termo, sizeof(termo));
 
-    printf("\n--- RESULTADO DA PESQUISA ---\n");
+    printf("\n_________RESULTADO DA PESQUISA__________\n");
 
     for (i = 0; i < totalTarefas; i++) {
         /* strstr retorna NULL quando não encontra o trecho.
